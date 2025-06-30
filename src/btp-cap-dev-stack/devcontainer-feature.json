@@ -1,0 +1,57 @@
+{
+  "id": "btp-cap-dev-stack",
+  "version": "1.0.0",
+  "name": "SAP BTP CAP Dev Stack",
+  "description": "Installs tools for SAP BTP CAP app development and deployment",
+  "options": {
+    "cds-dk": {
+        "type": "string",
+        "default": "latest",
+        "description": "SAP CAP cds-dk version (or 'none')"
+    },
+    "cf": {
+        "type": "string",
+        "default": "latest",
+        "description": "Cloud Foundry CLI version (or 'none')"
+    },
+    "pack": {
+        "type": "string",
+        "default": "latest",
+        "description": "Buildpacks Pack CLI version (or 'none')"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+          "mechatroner.rainbow-csv",
+          "dbaeumer.vscode-eslint",
+          "sapse.vscode-cds",
+          "sapse.vsc-extension-odata-csdl-modeler",
+          "sapse.vscode-wing-cds-editor-vsc",
+          "saposs.xml-toolkit",
+          "humao.rest-client",
+          "SAPSE.sap-ux-fiori-tools-extension-pack"
+        ]
+    }
+  },
+  "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+  ],
+  "dependsOn": {
+    "ghcr.io/devcontainers/features/node": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/java:1": {
+      "version": "21",
+      "installMaven": true,
+      "mavenVersion": "latest"
+    },
+    "ghcr.io/rjfmachado/devcontainer-features/cloud-native:1": {
+        "kubectl": "latest",
+        "kubelogin": "latest",
+        "helm": "latest",
+        "azwi": "none",
+        "cilium": "none",
+        "flux": "none"
+      }
+  }
+}

@@ -1,0 +1,30 @@
+{
+    "id": "cds-dk",
+    "version": "1.0.0",
+    "name": "SAP CAP cds-dk",
+    "description": "Install SAP CAP cds-dk",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "cds-dk version"
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/node"
+    ],
+    "customizations": {
+    "vscode": {
+      "extensions": [
+          "mechatroner.rainbow-csv",
+          "dbaeumer.vscode-eslint",
+          "sapse.vscode-cds",
+          "sapse.vsc-extension-odata-csdl-modeler",
+          "sapse.vscode-wing-cds-editor-vsc",
+          "saposs.xml-toolkit",
+          "humao.rest-client",
+          "SAPSE.sap-ux-fiori-tools-extension-pack"
+        ]
+    }
+  }
+}

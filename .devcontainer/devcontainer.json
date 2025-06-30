@@ -1,0 +1,8 @@
+{
+    "name": "SAP BTP CAP Dev Stack",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22",
+    "features": {
+        "../src/btp-cap-dev-stack": {}
+    }
+
+}
