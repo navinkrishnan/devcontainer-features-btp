@@ -1,6 +1,6 @@
-# btp-cap-dev-stack
+# BTP Dev Container Features (devcontainer-features-btp)
 
-An unofficial Visual Studio code [dev container](https://containers.dev/) feature with a collection of tools to support CAP application development in SAP BTP.
+An unofficial Visual Studio code [dev container](https://containers.dev/) feature with a collection of tools to accelerate the CAP (Cloud Application Programming Model) application development in SAP BTP.
 
 Installs the following command line utilities:
 
@@ -13,6 +13,15 @@ Installs the following command line utilities:
 
 
 Auto-detects latest versions and installs needed dependencies.
+
+## Available Features
+
+| Feature ID | Description |
+|------------|-------------|
+| [`cds-dk`](./src/cds-dk) | Installs the [SAP CAP cds-dk CLI](https://cap.cloud.sap/docs/get-started/). |
+| [`cf`](./src/cf) | Installs the latest [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/) (v8). |
+| [`pack`](./src/pack) | Installs the [Buildpacks Pack CLI](https://buildpacks.io/docs/tools/pack/). |
+| [`btp-cap-dev-stack`](./src/btp-cap-dev-stack) | Installs all of the above tools with version overrides. Use this for a full setup. |
 
 ## Usage
 

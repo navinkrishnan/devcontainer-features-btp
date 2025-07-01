@@ -6,7 +6,7 @@ ensure_nanolayer nanolayer_location "v0.5.6"
 
 cf_version="${_CF:-latest}"
 pack_version="${_PACK:-latest}"
-cds_dk_version="${_CDS_DK:-latest}"
+cds_dk_version="${_cds_dk:-latest}"
 
 install_feature() {
   local version=$1

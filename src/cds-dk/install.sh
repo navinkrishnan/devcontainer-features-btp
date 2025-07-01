@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+VERSION=${VERSION:-"latest"}
+
 echo "📦 Installing SAP CAP CDS (cds-dk) version: $VERSION"
 
 if [ "$VERSION" = "none" ]; then
