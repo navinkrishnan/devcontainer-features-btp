@@ -4,9 +4,11 @@ set -e
 source ./library_scripts.sh
 ensure_nanolayer nanolayer_location "v0.5.6"
 
-cf_version="${_CF:-latest}"
-pack_version="${_PACK:-latest}"
-cds_dk_version="${_cds_dk:-latest}"
+cf_version="${CF:-latest}"
+pack_version="${PACK:-latest}"
+cds_dk_version="${CDS_DK:-latest}"
+
+echo "Got version for pack: $pack_version, cf: $cf_version, cds-dk: $cds_dk_version"
 
 install_feature() {
   local version=$1

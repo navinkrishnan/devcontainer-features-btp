@@ -1,0 +1,12 @@
+{
+    "install_btp-cap-dev-stack": {
+        "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22",
+        "features": {
+            "btp-cap-dev-stack": {
+                "cds-dk": "8.9.5",
+                "pack": "0.38.0",
+                "cf": "none"
+            }
+        }
+    }
+}

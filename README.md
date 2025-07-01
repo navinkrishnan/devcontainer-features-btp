@@ -27,7 +27,9 @@ Auto-detects latest versions and installs needed dependencies.
 
 All the latest versions are installed by default. You can pin a specific version or specify `latest` or `none` if you wish to have the latest version or skip the installation of any specific cli. Please see below for an example:
 
-```
+### Full Stack (btp-cap-dev-stack)
+
+```json
 "features": {
     "ghcr.io/navinkrishnan/devcontainer-features-btp/btp-cap-dev-stack:1": {
         "cds-dk": "latest",
@@ -35,6 +37,17 @@ All the latest versions are installed by default. You can pin a specific version
         "helm": "none",
         "kubelogin": "0.0.22"
     }
+}
+```
+
+### Use Individual Features
+
+```json
+"features": {
+  "ghcr.io/navinkrishnan/devcontainer-features-btp/cf:1": {},
+  "ghcr.io/navinkrishnan/devcontainer-features-btp/cds-dk:1": {
+    "version": "latest"
+  }
 }
 ```
 

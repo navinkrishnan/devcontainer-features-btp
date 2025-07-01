@@ -2,10 +2,14 @@
     "name": "SAP BTP CAP Dev Stack",
     "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22",
     "features": {
-        "ghcr.io/navinkrishnan/devcontainer-features-btp/btp-cap-dev-stack:1": {
-            "cds-dk": "8.9.5",
-            "CDS_DK": "8.9.5",
-            "cds_dk": "8.9.5"
+        // "ghcr.io/navinkrishnan/devcontainer-features-btp/btp-cap-dev-stack:1": {
+        //     "cds-dk": "8.9.5",
+        //     "CDS_DK": "8.9.5",
+        //     "cds_dk": "8.9.5",
+        //     "pack": "0.38.0"
+        // }
+        "ghcr.io/navinkrishnan/devcontainer-features-btp/pack:1": {
+            "version": "0.38.0"
         }
     }
 
