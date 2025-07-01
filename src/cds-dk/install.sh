@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-echo "📦 Installing SAP CDS CLI (cds-dk) version: $VERSION"
+echo "📦 Installing SAP CAP CDS (cds-dk) version: $VERSION"
 
 if [ "$VERSION" = "none" ]; then
   echo "⚠️  Skipping cds-dk installation (version=none)"
@@ -16,9 +16,9 @@ fi
 
 # Install specific version or latest
 if [ "$VERSION" = "latest" ]; then
-  npm install -g cds-dk
+  npm install -g @sap/cds-dk
 else
-  npm install -g cds-dk@$VERSION
+  npm install -g @sap/cds-dk@$VERSION
 fi
 
-echo "✅ cds-dk installed successfully"
+echo "✅ @sap/cds-dk installed successfully"
