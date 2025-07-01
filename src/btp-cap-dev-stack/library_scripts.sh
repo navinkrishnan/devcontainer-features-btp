@@ -43,7 +43,9 @@ ensure_nanolayer() {
         local tmp_dir
         tmp_dir=$(mktemp -d)
 
-        trap 'rm -rf "$tmp_dir"' EXIT
+        # trap 'rm -rf "$tmp_dir"' EXIT
+        # Guard to only remove tmp_dir if it is defined and not empty
+        trap '[ -n "${tmp_dir:-}" ] && rm -rf "$tmp_dir"' EXIT
 
         local arch
         arch="$(uname -m)"
