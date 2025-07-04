@@ -23,7 +23,7 @@ Installs the recommended vscode extensions
 * saposs.xml-toolkit
 * humao.rest-client
 * SAPSE.sap-ux-fiori-tools-extension-pack
-* vscjava.vscode-java-debug"
+* vscjava.vscode-java-debug
 * vscjava.vscode-java-pack
 ## Available Features
 
@@ -33,8 +33,7 @@ Installs the recommended vscode extensions
 | [`cf`](./src/cf) | Installs the latest [Cloud Foundry CLI](https://docs.cloudfoundry.org/cf-cli/) (v8). |
 | [`pack`](./src/pack) | Installs the [Buildpacks Pack CLI](https://buildpacks.io/docs/tools/pack/). |
 | [`mbt`](./src/mbt) | Installs the [Cloud MTA Build tool (mbt)](https://sap.github.io/cloud-mta-build-tool/). |
-
-| [`btp-cap-dev-stack`](./src/btp-cap-dev-stack) | Installs all of the above tools with version overrides. Use this for a full setup. |
+| [`btp-cap-dev-stack`](./src/btp-cap-dev-stack) | Installs all of the above tools with version overrides. **Use this for a full setup**. |
 
 ## Usage
 
