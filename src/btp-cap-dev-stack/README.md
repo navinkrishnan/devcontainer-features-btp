@@ -18,6 +18,7 @@ Installs tools for SAP BTP CAP app development and deployment
 | cds-dk | SAP CAP cds-dk version (or 'none') | string | latest |
 | cf | Cloud Foundry CLI version (or 'none') | string | latest |
 | pack | Buildpacks Pack CLI version (or 'none') | string | latest |
+| mbt | SAP Cloud MTA Build Tool (mbt) version (or 'none') | string | latest |
 
 ## Customizations
 
