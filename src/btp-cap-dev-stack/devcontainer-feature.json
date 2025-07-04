@@ -1,6 +1,6 @@
 {
   "id": "btp-cap-dev-stack",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "name": "SAP BTP CAP Dev Stack",
   "description": "Installs tools for SAP BTP CAP app development and deployment",
   "options": {
@@ -50,7 +50,9 @@
           "sapse.vscode-wing-cds-editor-vsc",
           "saposs.xml-toolkit",
           "humao.rest-client",
-          "SAPSE.sap-ux-fiori-tools-extension-pack"
+          "SAPSE.sap-ux-fiori-tools-extension-pack",
+          "vscjava.vscode-java-debug",
+          "vscjava.vscode-java-pack"
         ]
     }
   },

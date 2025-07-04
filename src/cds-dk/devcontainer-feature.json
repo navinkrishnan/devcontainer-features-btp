@@ -1,6 +1,6 @@
 {
     "id": "cds-dk",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "name": "SAP CAP cds-dk",
     "description": "Install SAP CAP cds-dk",
     "options": {
@@ -23,7 +23,9 @@
           "sapse.vscode-wing-cds-editor-vsc",
           "saposs.xml-toolkit",
           "humao.rest-client",
-          "SAPSE.sap-ux-fiori-tools-extension-pack"
+          "SAPSE.sap-ux-fiori-tools-extension-pack",
+          "vscjava.vscode-java-debug",
+          "vscjava.vscode-java-pack"
         ]
     }
   }
