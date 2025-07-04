@@ -4,8 +4,7 @@
         "features": {
             "btp-cap-dev-stack": {
                 "cds-dk": "8.9.5",
-                "pack": "0.38.0",
-                "cf": "none"
+                "pack": "0.38.0"
             }
         }
     }
