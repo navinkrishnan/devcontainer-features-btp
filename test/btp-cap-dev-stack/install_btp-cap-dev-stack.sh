@@ -11,6 +11,7 @@ check "node" node --version
 check "npm" npm --version
 check "java" java --version
 check "cf" cf --version
+check "mbt" mbt --version
 check "pack" pack version
 check "kube" kubectl
 check "helm" helm version

@@ -1,0 +1,18 @@
+{
+    "id": "mbt",
+    "version": "1.0.0",
+    "name": "SAP Cloud MTA Build Tool (mbt)",
+    "description": "Install SAP Cloud MTA Build Tool (mbt)",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "latest",
+            "description": "mbt version"
+        }
+    },
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/node": {
+            "version": "20"
+        }
+    }
+}

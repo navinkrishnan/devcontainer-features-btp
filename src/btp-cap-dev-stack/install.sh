@@ -7,8 +7,9 @@ ensure_nanolayer nanolayer_location "v0.5.6"
 cf_version="${CF:-latest}"
 pack_version="${PACK:-latest}"
 cds_dk_version="${CDS_DK:-latest}"
+mbt_version="${MBT:-latest}"
 
-echo "Got version for pack: $pack_version, cf: $cf_version, cds-dk: $cds_dk_version"
+echo "Got version for pack: $pack_version, cf: $cf_version, cds-dk: $cds_dk_version, mbt: $mbt_version"
 
 install_feature() {
   local version=$1
@@ -28,5 +29,6 @@ install_feature() {
 install_feature "$cf_version" "cf" "1.0.0"
 install_feature "$pack_version" "pack" "1.0.0"
 install_feature "$cds_dk_version" "cds-dk" "1.0.0"
+install_feature "$mbt_version" "mbt" "1.0.0"
 
 echo "btp-cap-dev-stack installation complete."

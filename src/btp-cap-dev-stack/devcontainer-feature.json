@@ -1,6 +1,6 @@
 {
   "id": "btp-cap-dev-stack",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "name": "SAP BTP CAP Dev Stack",
   "description": "Installs tools for SAP BTP CAP app development and deployment",
   "options": {
@@ -18,6 +18,11 @@
         "type": "string",
         "default": "latest",
         "description": "Buildpacks Pack CLI version (or 'none')"
+    },
+    "mbt": {
+        "type": "string",
+        "default": "latest",
+        "description": "SAP Cloud MTA Build Tool (mbt) version (or 'none')"
     }
   },
   "customizations": {
