@@ -19,6 +19,9 @@ Installs tools for SAP BTP CAP app development and deployment
 | cf | Cloud Foundry CLI version (or 'none') | string | latest |
 | pack | Buildpacks Pack CLI version (or 'none') | string | latest |
 | mbt | SAP Cloud MTA Build Tool (mbt) version (or 'none') | string | latest |
+| kubectl | Kubernetes CLI (kubectl) version (or 'none') | string | latest |
+| kubelogin | Kubernetes Login (kubelogin) version (or 'none') | string | latest |
+| helm | Helm version (or 'none') | string | latest |
 
 ## Customizations
 
