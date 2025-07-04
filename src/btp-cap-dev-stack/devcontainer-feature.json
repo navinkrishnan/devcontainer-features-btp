@@ -1,6 +1,6 @@
 {
   "id": "btp-cap-dev-stack",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "name": "SAP BTP CAP Dev Stack",
   "description": "Installs tools for SAP BTP CAP app development and deployment",
   "options": {
@@ -23,6 +23,21 @@
         "type": "string",
         "default": "latest",
         "description": "SAP Cloud MTA Build Tool (mbt) version (or 'none')"
+    },
+    "kubectl": {
+        "type": "string",
+        "default": "latest",
+        "description": "Kubernetes CLI (kubectl) version (or 'none')"
+    },
+    "kubelogin": {
+        "type": "string",
+        "default": "latest",
+        "description": "Kubernetes Login (kubelogin) version (or 'none')"
+    },
+    "helm": {
+        "type": "string",
+        "default": "latest",
+        "description": "Helm version (or 'none')"
     }
   },
   "customizations": {
@@ -49,14 +64,6 @@
       "version": "21",
       "installMaven": true,
       "mavenVersion": "latest"
-    },
-    "ghcr.io/rjfmachado/devcontainer-features/cloud-native:1": {
-        "kubectl": "latest",
-        "kubelogin": "latest",
-        "helm": "latest",
-        "azwi": "none",
-        "cilium": "none",
-        "flux": "none"
-      }
+    }
   }
 }
