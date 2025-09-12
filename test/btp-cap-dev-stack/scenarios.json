@@ -1,6 +1,6 @@
 {
     "install_btp-cap-dev-stack": {
-        "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22",
+        "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22-bookworm",
         "features": {
             "btp-cap-dev-stack": {
                 "cds-dk": "8.9.5",

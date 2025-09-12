@@ -20,7 +20,7 @@ jobs:
             - pack
           base-image:
             - mcr.microsoft.com/devcontainers/base:ubuntu
-            - mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22
+            - mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22-bookworm
       steps:
         - uses: actions/checkout@v4
 
