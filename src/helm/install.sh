@@ -24,7 +24,7 @@ fi
 
 echo "HELM_VERSION=${HELM_VERSION}"
 
-helm_filename="helm-${HELM_VERSION}-${OS}-${ARCH}.tar.gz"
+helm_filename="helm-v${HELM_VERSION}-${OS}-${ARCH}.tar.gz"
 tmp_helm_filename="/tmp/helm/${helm_filename}"
 
 # --- Checksum handling ---
