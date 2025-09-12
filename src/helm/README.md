@@ -21,4 +21,4 @@ Install Helm package manager for Kubernetes
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/navinkrishnan/devcontainer-features-btp/blob/main/src/helm/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
