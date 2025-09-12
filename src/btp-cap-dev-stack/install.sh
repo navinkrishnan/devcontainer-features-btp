@@ -33,6 +33,7 @@ install_feature "$cf_version" "cf" "1.0.0"
 install_feature "$pack_version" "pack" "1.0.0"
 install_feature "$cds_dk_version" "cds-dk" "1.0.0"
 install_feature "$mbt_version" "mbt" "1.0.0"
+install_feature "$helm_version" "helm" "1.0.0"
 
 # REVISIT: Following features are downloaded from external devcontainer-features
 # to be moved to this repository in the future.
@@ -52,7 +53,7 @@ install_additional_feature() {
       "ghcr.io/rjfmachado/devcontainer-features/$feature:$feature_version" \
       --option azwi="none" --option cilium="none"  --option flux="none" \
       --option kubelogin="$kubelogin_version" --option kubectl="$kubectl_version" \
-      --option helm="$helm_version"
+      --option helm="none"
   else
     echo "Skipping $feature"
   fi

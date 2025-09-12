@@ -1,10 +1,11 @@
 {
     "name": "SAP BTP CAP Dev Stack",
-    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:dev-22-bookworm",
     "features": {
         "ghcr.io/navinkrishnan/devcontainer-features-btp/btp-cap-dev-stack:1": {
             "cds-dk": "8.9.5",
-            "pack": "0.38.0"
+            "pack": "0.38.0",
+            "helm": "3.18.4"
         }
     }
 

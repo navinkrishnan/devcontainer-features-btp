@@ -1,13 +1,13 @@
 
-# CN Buildpacks Pack CLI (pack)
+# Helm package manager for Kubernetes (helm)
 
-Install Cloud Native Buildpacks Pack CLI
+Install Helm package manager for Kubernetes
 
 ## Example Usage
 
 ```json
 "features": {
-    "ghcr.io/navinkrishnan/devcontainer-features-btp/pack:1": {}
+    "ghcr.io/navinkrishnan/devcontainer-features-btp/helm:1": {}
 }
 ```
 
@@ -15,7 +15,7 @@ Install Cloud Native Buildpacks Pack CLI
 
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
-| version | Pack CLI version | string | latest |
+| version | Helm version | string | latest |
 
 
 
