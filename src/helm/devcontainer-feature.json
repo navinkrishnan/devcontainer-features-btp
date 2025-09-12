@@ -1,6 +1,6 @@
 {
   "id": "helm",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "Helm package manager for Kubernetes",
   "description": "Install Helm package manager for Kubernetes",
   "options": {

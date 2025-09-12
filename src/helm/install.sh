@@ -20,11 +20,14 @@ OS=$(uname | tr '[:upper:]' '[:lower:]')
 
 if [ "${HELM_VERSION}" = "latest" ]; then
     HELM_VERSION=$(curl -fsSL https://api.github.com/repos/helm/helm/releases/latest | grep tag_name | cut -d '"' -f 4)
+    helm_filename="helm-${HELM_VERSION}-${OS}-${ARCH}.tar.gz"
+else
+    helm_filename="helm-v${HELM_VERSION}-${OS}-${ARCH}.tar.gz"
 fi
 
 echo "HELM_VERSION=${HELM_VERSION}"
 
-helm_filename="helm-v${HELM_VERSION}-${OS}-${ARCH}.tar.gz"
+
 tmp_helm_filename="/tmp/helm/${helm_filename}"
 
 # --- Checksum handling ---
