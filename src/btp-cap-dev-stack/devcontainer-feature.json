@@ -1,6 +1,6 @@
 {
   "id": "btp-cap-dev-stack",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "name": "SAP BTP CAP Dev Stack",
   "description": "Installs tools for SAP BTP CAP app development and deployment",
   "options": {
