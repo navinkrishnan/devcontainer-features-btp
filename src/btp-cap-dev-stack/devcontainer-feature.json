@@ -1,6 +1,6 @@
 {
   "id": "btp-cap-dev-stack",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "name": "SAP BTP CAP Dev Stack",
   "description": "Installs tools for SAP BTP CAP app development and deployment",
   "options": {
@@ -61,7 +61,9 @@
   ],
   "dependsOn": {
     "ghcr.io/devcontainers/features/node": {},
-    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {
+      "moby": false
+    },
     "ghcr.io/devcontainers/features/java:1": {
       "version": "21",
       "installMaven": true,
