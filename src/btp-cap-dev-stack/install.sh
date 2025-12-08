@@ -29,10 +29,10 @@ install_feature() {
   fi
 }
 
-install_feature "$cf_version" "cf" "1.0.0"
-install_feature "$pack_version" "pack" "1.0.0"
-install_feature "$cds_dk_version" "cds-dk" "1.0.0"
-install_feature "$mbt_version" "mbt" "1.0.0"
+install_feature "$cf_version" "cf" "1"
+install_feature "$pack_version" "pack" "1"
+install_feature "$cds_dk_version" "cds-dk" "1"
+install_feature "$mbt_version" "mbt" "1"
 install_feature "$helm_version" "helm" "1"
 
 # REVISIT: Following features are downloaded from external devcontainer-features
