@@ -1,6 +1,6 @@
 {
   "id": "pack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "name": "CN Buildpacks Pack CLI",
   "description": "Install Cloud Native Buildpacks Pack CLI",
   "options": {
