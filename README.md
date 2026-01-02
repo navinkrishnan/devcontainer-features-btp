@@ -1,6 +1,6 @@
 # BTP Dev Container Features (devcontainer-features-btp)
 
-An unofficial Visual Studio code [dev container](https://containers.dev/) feature with a collection of tools to accelerate the CAP (Cloud Application Programming Model) application development in SAP BTP.
+Visual Studio code [dev container](https://containers.dev/) feature with a collection of tools to accelerate the CAP (Cloud Application Programming Model) application development in SAP BTP.
 
 Installs the following command line utilities:
 
