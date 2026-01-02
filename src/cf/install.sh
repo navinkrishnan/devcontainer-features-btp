@@ -1,63 +1,79 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "📦 Installing Cloud Foundry CLI (APT-based)"
-echo "➡️  Requested version: ${VERSION:-latest}"
+echo "==> Installing Cloud Foundry CLI (VERSION=${VERSION:-latest})"
+export DEBIAN_FRONTEND=noninteractive
 
-# -------------------------------
-# Skip installation
-# -------------------------------
-if [ "${VERSION:-latest}" = "none" ]; then
-  echo "⚠️  Skipping cf CLI installation (version=none)"
+# ------------------------------------------------------------
+# Handle "none"
+# ------------------------------------------------------------
+if [[ "${VERSION:-latest}" == "none" ]]; then
+  echo "==> Skipping CF CLI installation"
   exit 0
 fi
 
-# -------------------------------
-# Install dependencies
-# -------------------------------
+# ------------------------------------------------------------
+# Detect architecture
+# ------------------------------------------------------------
+ARCH="$(dpkg --print-architecture)"
+case "$ARCH" in
+  amd64) CF_ARCH="linux64" ;;
+  arm64) CF_ARCH="linuxarm64" ;;
+  *)
+    echo "Unsupported architecture: $ARCH"
+    exit 1
+    ;;
+esac
+
+# ------------------------------------------------------------
+# Install prerequisites
+# ------------------------------------------------------------
 apt-get update
 apt-get install -y --no-install-recommends \
-  ca-certificates \
   curl \
-  gnupg
+  ca-certificates \
+  gnupg \
+  tar
 
-# -------------------------------
-# Add CF CLI GPG key (modern way)
-# -------------------------------
-install -m 0755 -d /etc/apt/keyrings
+# ------------------------------------------------------------
+# Install latest via APT (best path)
+# ------------------------------------------------------------
+if [[ "${VERSION:-latest}" == "latest" ]]; then
+  echo "==> Installing latest CF CLI via APT"
 
-curl -fsSL https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key \
-  | gpg --dearmor \
-  | tee /etc/apt/keyrings/cloudfoundry-cli.gpg > /dev/null
+  CF_KEYRING="/usr/share/keyrings/cloudfoundry-cli.gpg"
+  curl -fsSL https://packages.cloudfoundry.org/debian/cli.cloudfoundry.org.key \
+    | gpg --dearmor -o "$CF_KEYRING"
 
-chmod 0644 /etc/apt/keyrings/cloudfoundry-cli.gpg
+  echo "deb [signed-by=$CF_KEYRING] https://packages.cloudfoundry.org/debian stable main" \
+    > /etc/apt/sources.list.d/cloudfoundry-cli.list
 
-# -------------------------------
-# Add CF CLI APT repository
-# -------------------------------
-echo "deb [signed-by=/etc/apt/keyrings/cloudfoundry-cli.gpg] https://packages.cloudfoundry.org/debian stable main" \
-  > /etc/apt/sources.list.d/cloudfoundry-cli.list
-
-# -------------------------------
-# Install CF CLI
-# -------------------------------
-apt-get update
-
-if [ "${VERSION:-latest}" = "latest" ]; then
+  apt-get update
   apt-get install -y --no-install-recommends cf8-cli
+
+# ------------------------------------------------------------
+# Install pinned version via tarball
+# ------------------------------------------------------------
 else
-  apt-get install -y --no-install-recommends "cf8-cli=${VERSION}*"
+  echo "==> Installing CF CLI version ${VERSION} via tarball (${CF_ARCH})"
+
+  TMP_DIR="$(mktemp -d)"
+  curl -fsSL \
+    "https://packages.cloudfoundry.org/stable?release=${CF_ARCH}&version=${VERSION}" \
+    -o "${TMP_DIR}/cf.tgz"
+
+  tar -xzf "${TMP_DIR}/cf.tgz" -C "${TMP_DIR}"
+  mv "${TMP_DIR}/cf" /usr/local/bin/cf
+  chmod +x /usr/local/bin/cf
+  rm -rf "${TMP_DIR}"
 fi
 
-# -------------------------------
-# Cleanup
-# -------------------------------
+# ------------------------------------------------------------
+# Verify & cleanup
+# ------------------------------------------------------------
+cf version
+
 apt-get clean
 rm -rf /var/lib/apt/lists/*
 
-# -------------------------------
-# Verify
-# -------------------------------
-cf version
-
-echo "✅ Cloud Foundry CLI installation complete"
+echo "==> CF CLI installation completed"
